@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue 3 Example</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>用户名:<input type="text" v-model="name" /></h1>
+    <h1>您输入的用户名是: {{ name }}</h1>
+  </div>
+  <!-- 引入 Vue 3 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <script>
+    // 使用 Vue 3 的 createApp 方法  
+    const { createApp } = Vue;
+    const app = createApp({
+      // 定义组件的选项  
+      data() {
+        return {
+          name: ''
+        };
+      }
+    });
+
+    // 挂载到 DOM 元素上  
+    app.mount('#app');  
+  </script>
+
+</body>
+
+</html>
